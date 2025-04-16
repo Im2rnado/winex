@@ -2,12 +2,7 @@
 import InfoItem from "./InfoItem.vue";
 import Person from "./Person.vue";
 
-import Adeola from "@/assets/image/adeola.jpg";
-import Ifeanyi from "@/assets/image/ifeanyi.jpg";
-import Ronke from "@/assets/image/ronke.png";
-import Harold from "@/assets/image/harold.png";
-import Adaora from "@/assets/image/adaora.png";
-import Ayobami from "@/assets/image/ayobami.jpg";
+import Moustafa from "@/assets/image/moustafa.jpeg";
 </script>
 
 <template>
@@ -18,11 +13,8 @@ import Ayobami from "@/assets/image/ayobami.jpg";
       </section>
       <Suspense>
          <section class="Section Section-2">
-            <InfoItem
-               heading="Who we are"
-               image="info"
-               color="linear-gradient(110.76deg, #204B57 0.54%, #053957 66.49%)"
-            >
+            <InfoItem heading="Who we are" image="info"
+               color="linear-gradient(110.76deg, #204B57 0.54%, #053957 66.49%)">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -40,11 +32,7 @@ import Ayobami from "@/assets/image/ayobami.jpg";
                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.
             </InfoItem>
-            <InfoItem
-               heading="What is our mission?"
-               image="flag"
-               color="#36578B"
-            >
+            <InfoItem heading="What is our mission?" image="flag" color="#36578B">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -53,11 +41,8 @@ import Ayobami from "@/assets/image/ayobami.jpg";
                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                sunt in culpa qui officia deserunt mollit anim id est laborum.
             </InfoItem>
-            <InfoItem
-               heading="Going global"
-               image="world"
-               color="linear-gradient(222.98deg, #8A716A 28.01%, #6C5A55 100%)"
-            >
+            <InfoItem heading="Going global" image="world"
+               color="linear-gradient(222.98deg, #8A716A 28.01%, #6C5A55 100%)">
                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -72,28 +57,28 @@ import Ayobami from "@/assets/image/ayobami.jpg";
          <div class="Overlay"></div>
          <h1 class="Heading">Meet Our Management</h1>
          <div class="Profile-Grid">
-            <Person :image="Adeola">
-               Adeola Adenuga
+            <Person :image="Moustafa">
+               Moustafa Akef
                <template #title> Chief Executive Officer </template>
             </Person>
-            <Person :image="Ifeanyi">
-               Ifeanyi Michaels
+            <Person :image="Moustafa">
+               Moustafa Akef
                <template #title> Chief Legal Officer </template>
             </Person>
-            <Person :image="Ronke">
-               Ronke Bankole
+            <Person :image="Moustafa">
+               Moustafa Akef
                <template #title> Executive Manager </template>
             </Person>
-            <Person :image="Harold">
-               Harold Visser
+            <Person :image="Moustafa">
+               Moustafa Akef
                <template #title>Assistant Manager</template>
             </Person>
-            <Person :image="Adaora">
-               Adaora Obi
+            <Person :image="Moustafa">
+               Moustafa Akef
                <template #title>Chief Financial Officer</template>
             </Person>
-            <Person :image="Ayobami">
-               Ayobami Ojo
+            <Person :image="Moustafa">
+               Moustafa Akef
                <template #title>Chief Technical Officer</template>
             </Person>
          </div>

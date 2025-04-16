@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import gsap from "gsap";
-import PaperPlane from "@/assets/svg/paper-plane.svg";
+import PaperPlane from "@/assets/svg/truck.svg";
 import DollarSign from "@/assets/svg/dollar.svg";
-import NairaSign from "@/assets/svg/naira.svg";
+import EgpSign from "@/assets/svg/egp2.svg";
 import World from "@/assets/svg/world.svg";
 import Location from "@/assets/svg/location.svg";
 import Box from "@/assets/svg/box.svg";
@@ -23,7 +23,7 @@ const section2Observer = new IntersectionObserver(([{ isIntersecting }]) => {
    const tweenvar = isIntersecting ? 1 : 0;
    gsap.to(".Section-2 .Heading", tweens.fadeInFromTop[tweenvar]);
    gsap.to(".Section-2 .Line", tweens.lineExpand[tweenvar]);
-   gsap.to(".Section-2 .Naira-Sign", tweens.nairaSign[tweenvar]);
+   gsap.to(".Section-2 .Egp-Sign", tweens.egpSign[tweenvar]);
    gsap.to(".Section-2 .Dollar-Sign", tweens.dollarSign[tweenvar]);
 }, observeroptions);
 
@@ -57,41 +57,27 @@ onMounted(() => {
    <main class="Home">
       <section class="Section Section-1">
          <div class="Text">
-            <h1 class="Heading">Here to there, in record time.</h1>
+            <h1 class="Heading">We are a Logistics Company</h1>
             <p class="Paragraph">
-               Cadence is a logistics company focused on providing the best
-               means of transport for your products and services. Send anything
-               to anywhere, safely and quickly, with us.
+               Winex is your trusted logistics partner in Egypt, providing fast, reliable, and secure delivery solutions
+               for businesses and individuals. Whether you’re sending documents, parcels, or large shipments, we ensure
+               your items reach every corner of Egypt safely and on time.
             </p>
             <button type="button" class="Action-Button">Get Started</button>
          </div>
          <div class="Paper-Plane-Container">
-            <img
-               :src="PaperPlane"
-               v-animate="PAPER_PLANE"
-               class="Paper-Plane"
-               alt="White paper plane with green-to-brown outline gradient."
-            />
+            <img :src="PaperPlane" v-animate="PAPER_PLANE" class="Paper-Plane"
+               alt="White paper plane with green-to-brown outline gradient." />
          </div>
       </section>
       <section ref="section2Ref" class="Section Section-2">
          <hr class="Line" />
-         <img
-            :src="NairaSign"
-            class="Floating-Image Naira-Sign"
-            alt="A green-to-brown colored naira sign."
-         />
-         <img
-            :src="DollarSign"
-            class="Floating-Image Dollar-Sign"
-            alt="A green-to-brown colored dollar sign."
-         />
+         <img :src="EgpSign" class="Floating-Image Egp-Sign" alt="A green-to-brown colored egp sign." />
+         <img :src="DollarSign" class="Floating-Image Dollar-Sign" alt="A green-to-brown colored dollar sign." />
          <h1 class="Heading">Cheap, affordable costs.</h1>
          <p class="Paragraph">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam sint
-            possimus illum voluptates veniam atque placeat qui, ratione, ex
-            eligendi beatae ad repudiandae quidem dicta, mollitia cumque aliquid
-            aspernatur ullam.
+            Enjoy competitive rates for all your shipping needs. At Winex, we believe in transparent pricing with no
+            hidden fees, making it easier for you to send packages anywhere in Egypt without breaking the bank.
          </p>
          <button type="button" class="Action-Button">
             See Our Pricing List
@@ -101,14 +87,13 @@ onMounted(() => {
          <h1 class="Heading">Seamless and Secure Delivery.</h1>
          <div class="Grid-Container">
             <GridItem :src="World" alt="A white outline of a globe.">
-               Ship from UK/USA to Nigeria & Export to 230 plus locations
-               worldwide.
+               Deliver to all governorates and cities across Egypt.
             </GridItem>
             <GridItem :src="Location" alt="A white outline of a location pin.">
-               Get real time tracking on your shipments and services.
+               Track your shipments in real time, every step of the way.
             </GridItem>
             <GridItem :src="Box" alt="A white outline of a packaging box.">
-               Proper, waterproof and damage-resistant item packaging.
+               Safe, secure, and weather-resistant packaging for every delivery.
             </GridItem>
          </div>
          <button type="button" class="Action-Button">Learn More</button>
@@ -118,13 +103,10 @@ onMounted(() => {
             <img :src="Handshake" class="Handshake" alt="A handshake" />
          </div>
          <div class="Text">
-            <h1 class="Heading">Ready to Get Started?</h1>
+            <h1 class="Heading">Ready to Ship with Winex?</h1>
             <p class="Paragraph">
-               Convinced? Give Cadence a go! Lorem ipsum dolor sit, amet
-               consectetur adipisicing elit. Illo id vitae, sequi asperiores
-               debitis, ut dolor quasi voluptatibus omnis, minus velit
-               distinctio maxime voluptates corrupti eius provident. Eaque, quia
-               mollitia.
+               Join thousands of satisfied customers across Egypt. Experience hassle-free logistics and let us handle
+               your deliveries with care and professionalism. Start shipping with Winex today!
             </p>
             <button type="button" class="Action-Button">Send an Item</button>
          </div>
@@ -234,7 +216,7 @@ onMounted(() => {
    filter: drop-shadow(0px 10px 5px);
    transform: scale(0.8);
 }
-.Floating-Image.Naira-Sign {
+.Floating-Image.Egp-Sign {
    top: 5%;
    left: var(--Vertical-Squeeze);
 }
@@ -401,7 +383,7 @@ onMounted(() => {
    .Floating-Image {
       width: 30%;
    }
-   .Floating-Image.Naira-Sign {
+   .Floating-Image.Egp-Sign {
       left: 0;
    }
    .Floating-Image.Dollar-Sign {

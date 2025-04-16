@@ -12,6 +12,6 @@ describe("AppFooter.vue", () => {
       expect(headings[0].text()).toBe("INFO");
    });
    test("should show copyright", () => {
-      expect(setup.wrapper.text()).toContain("Cadence Logistics 2022.");
+      expect(setup.wrapper.text()).toContain("Winex 2025.");
    });
 });

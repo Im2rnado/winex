@@ -9,10 +9,10 @@ import Instagram from "@/assets/svg/instagram.svg";
 <template>
    <footer class="App-Footer">
       <div class="Logo-Container">
-         <img :src="Logo" alt="Cadence Logo" />
+         <img :src="Logo" alt="Winex Logo" />
          <p>
-            © Cadence®, the Cadence logo, and the names and marks associated
-            with Cadence's products are trademarks of Cadence Logistics and/or
+            © Winex®, the Winex logo, and the names and marks associated
+            with Winex's products are trademarks of Winex and/or
             its affiliates.
          </p>
       </div>
@@ -26,7 +26,7 @@ import Instagram from "@/assets/svg/instagram.svg";
          <li class="Links">
             <h3>INFO</h3>
             <ul>
-               <li>About Cadence</li>
+               <li>About Winex</li>
                <li>Help & Support</li>
                <li>FAQs</li>
                <li>Return Policy</li>
@@ -59,7 +59,7 @@ import Instagram from "@/assets/svg/instagram.svg";
             </div>
          </li>
       </nav>
-      <p class="Copyright">Cadence Logistics 2022.</p>
+      <p class="Copyright">Winex 2025.</p>
    </footer>
 </template>
 
@@ -74,12 +74,13 @@ import Instagram from "@/assets/svg/instagram.svg";
    background: #11567d29;
    padding-inline: var(--Vertical-Squeeze);
 }
+
 .Logo-Container img {
    height: 66px;
 }
+
 .Logo-Container p {
    max-width: 400px;
-   font-weight: 700;
    font-size: 13px;
    line-height: 16px;
    color: #125e8a;
@@ -90,6 +91,7 @@ import Instagram from "@/assets/svg/instagram.svg";
    grid-template-columns: repeat(4, 25%);
    width: 100%;
 }
+
 .Links h3 {
    font-family: "Raleway";
    font-weight: 700;
@@ -100,6 +102,7 @@ import Instagram from "@/assets/svg/instagram.svg";
    background-clip: text;
    margin-bottom: 10px;
 }
+
 .Links li {
    font-weight: 400;
    font-size: 16px;
@@ -107,12 +110,14 @@ import Instagram from "@/assets/svg/instagram.svg";
    margin-bottom: 8px;
    color: #125e8a;
 }
+
 .Icon-Row {
    display: grid;
    grid-template-columns: auto auto auto auto;
    column-gap: 5px;
    width: fit-content;
 }
+
 .Outer-Icon-Row {
    display: none;
 }
@@ -122,24 +127,28 @@ import Instagram from "@/assets/svg/instagram.svg";
    bottom: 0;
    font-family: "Product Sans";
    font-style: normal;
-   font-weight: 400;
+   font-weight: 600;
    font-size: 19.0317px;
    line-height: 23px;
    text-align: center;
    margin-bottom: 40px;
    color: #11567d;
 }
+
 @media (max-width: 1024px) {
    .Logo-Container img {
       height: 50px;
    }
+
    .Links h3 {
       font-size: 20px;
    }
+
    .Links li {
       font-size: 14px;
    }
 }
+
 @media (max-width: 768px) {
    .App-Footer {
       display: flex;
@@ -148,15 +157,18 @@ import Instagram from "@/assets/svg/instagram.svg";
       flex-direction: column;
       height: 540px;
    }
+
    .Logo-Container {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
    }
+
    .Logo-Container img {
       height: 60px;
    }
+
    .Logo-Container p {
       text-align: center;
       width: 95%;
@@ -164,45 +176,56 @@ import Instagram from "@/assets/svg/instagram.svg";
       line-height: 19px;
       margin-bottom: 0;
    }
+
    .Outer-Icon-Row {
       display: grid;
       column-gap: 13px;
       margin-block: 40px;
    }
+
    .Icon-Row img {
       height: 35px;
    }
+
    .Links-Container {
       display: flex;
       justify-content: space-around;
       padding-inline: var(--Vertical-Squeeze);
       margin-bottom: 30px;
    }
+
    .Links {
       display: flex;
       align-items: center;
       flex-direction: column;
    }
-   .Links > * {
+
+   .Links>* {
       text-align: center;
    }
+
    .Links li {
       font-size: 13pt;
    }
+
    .Links.Contact-Links {
       display: none;
    }
 }
+
 @media (max-width: 425px) {
    .Logo-Container p {
       font-size: 9pt;
    }
+
    .Links h3 {
       font-size: 15px;
    }
+
    .Links li {
       font-size: 10pt;
    }
+
    .Copyright {
       font-size: 10pt;
    }

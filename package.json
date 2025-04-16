@@ -1,8 +1,8 @@
 {
-   "name": "cadence-logistics",
+   "name": "winex",
    "version": "1.0.0",
    "start-date": "11/1/2022",
-   "description": "A full website for a logistics company in Lagos, Nigeria.",
+   "description": "A full website for a logistics company in Egypt.",
    "main": "main.js",
    "scripts": {
       "dev": "vite",

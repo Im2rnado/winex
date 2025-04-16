@@ -37,7 +37,7 @@ export const tweens = {
          duration: 0.7,
       },
    ],
-   nairaSign: [
+   egpSign: [
       // Initial
       {
          xPercent: 100,

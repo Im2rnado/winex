@@ -60,21 +60,21 @@ onMounted(() => {
          <div class="Grid-Container">
             <ServiceItem :src="Truck" alt="truck icon.">
                <template #heading> Procurement </template>
-               Candace Logistics offers procurement and buyer representation to
+               Winex offers procurement and buyer representation to
                our customers, we buy, pick up, crate and package on your behalf,
                and ship either by air or sea to your final destination.
             </ServiceItem>
             <ServiceItem :src="Freight" alt="freight ship icon.">
                <template #heading> Freight Services </template>
-               Cadence ships worldwide, containers and RoRos “Roll on Roll off”,
+               Winex ships worldwide, containers and RoRos “Roll on Roll off”,
                whether you are shipping your car, household goods, motorhomes,
                tractors, heavy construction / earth moving equipment and general
                shipping, we can handle it all.
             </ServiceItem>
             <ServiceItem :src="Bicycle" alt="icon of person riding a bicycle.">
                <template #heading>Dispatch Delivery</template>
-               Cadence provides the largest last-mile courier delivery solution
-               in Nigeria. Send your parcels and packages with Cadence Go.
+               Winex provides the largest last-mile courier delivery solution
+               in Egypt. Send your parcels and packages with Winex Go.
             </ServiceItem>
             <ServiceItem :src="Warehouse" alt="warehouse icon.">
                <template #heading> Warehousing </template>
@@ -83,7 +83,7 @@ onMounted(() => {
             </ServiceItem>
             <ServiceItem :src="Papers" alt="icon of stacked papers.">
                <template #heading>Customs Clearance</template>
-               Cadence will handle all processes involved in the transportation
+               Winex will handle all processes involved in the transportation
                of your goods, including clearance.
             </ServiceItem>
             <ServiceItem :src="Chatbox" alt="message chat icon.">

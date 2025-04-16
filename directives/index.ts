@@ -1,4 +1,4 @@
-import { AnimationConfig, runAnimationConfig } from "@/animations";
+import { runAnimationConfig } from "@/animations";
 import { Directive } from "vue";
 
 export const AnimateDirective: Directive<HTMLElement, AnimationConfig> = {

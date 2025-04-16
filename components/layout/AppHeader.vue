@@ -49,34 +49,26 @@ const links = reactive<Array<{ to: Page; text: string }>>([
 <template>
    <Teleport to="body">
       <header ref="headerRef" class="Header">
-         <img :src="Logo" alt="Cadence" class="Logo" />
+         <img :src="Logo" alt="Winex" class="Logo" />
          <nav class="Navigation-Bar">
             <menu class="Navlinks">
-               <router-link
-                  v-for="link in links"
-                  :class="[
-                     { Selected: store.page === link.to },
-                     `Header-${link.text.split(/\s/g).join('-')}-Link`,
-                     'Navlink',
-                  ]"
-                  :to="link.to"
-                  :key="link.text"
-               >
+               <router-link v-for="link in links" :class="[
+                  { Selected: store.page === link.to },
+                  `Header-${link.text.split(/\s/g).join('-')}-Link`,
+                  'Navlink',
+               ]" :to="link.to" :key="link.text">
                   {{ link.text }}
                </router-link>
-               <button type="button" class="Navlink Contact-Us">
-                  Contact Us
+               <button type="button" class="Navlink Careers">
+                  Careers
                </button>
-               <button type="button" class="Item-Tracker-Button">
-                  Track An Item
+               <button type="button" class="Item-Tracker-Button Contact-Us">
+                  Contact Us
                </button>
             </menu>
          </nav>
-         <button
-            @click="sidebarIsOpen = !sidebarIsOpen"
-            :class="[{ Toggled: sidebarIsOpen }, 'Sidebar-Toggle']"
-            type="button"
-         >
+         <button @click="sidebarIsOpen = !sidebarIsOpen" :class="[{ Toggled: sidebarIsOpen }, 'Sidebar-Toggle']"
+            type="button">
             <div class="Sidebar-Toggle-Line" v-for="x in 3"></div>
          </button>
       </header>
@@ -84,29 +76,17 @@ const links = reactive<Array<{ to: Page; text: string }>>([
          <Transition name="sidebar">
             <aside v-if="sidebarIsOpen" class="Sidebar">
                <TransitionGroup @enter="onEnter" :css="false">
-                  <router-link
-                     @click="sidebarIsOpen = !sidebarIsOpen"
-                     v-for="(link, index) in links"
-                     :class="[
-                        { Selected: store.page === link.to },
-                        'Sidebar-Link',
-                     ]"
-                     :to="link.to"
-                     :key="link.text"
-                     :data-index="index"
-                  >
+                  <router-link @click="sidebarIsOpen = !sidebarIsOpen" v-for="(link, index) in links" :class="[
+                     { Selected: store.page === link.to },
+                     'Sidebar-Link',
+                  ]" :to="link.to" :key="link.text" :data-index="index">
                      {{ link.text }}
                   </router-link>
-                  <button
-                     type="button"
-                     :key="4"
-                     :data-index="3"
-                     class="Sidebar-Link"
-                  >
-                     Contact Me
+                  <button type="button" :key="4" :data-index="3" class="Sidebar-Link">
+                     Careers
                   </button>
-                  <button :key="5" :data-index="4" class="Item-Tracker-Button">
-                     Track an Item
+                  <button :key="5" :data-index="4" class="Item-Tracker-Button Contact-Us">
+                     Contact Us
                   </button>
                </TransitionGroup>
             </aside>
@@ -136,11 +116,12 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    font-size: 18px;
    background-color: white;
 }
+
 .Logo {
    height: 48%;
 }
 
-.Navlinks > * {
+.Navlinks>* {
    margin-right: 48px;
 }
 
@@ -148,6 +129,7 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    font-weight: 700;
    border-bottom: 3px solid var(--Dark-Green);
 }
+
 .Item-Tracker-Button {
    padding: 14px 24px;
    margin: auto;
@@ -155,23 +137,28 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    border-radius: 8px;
    transition-duration: 500ms;
 }
+
 .Item-Tracker-Button:hover {
    background-color: var(--Another-Dark-Green);
    color: white;
 }
+
 .Sidebar-Toggle {
    position: relative;
    display: none;
 }
+
 @media (max-width: 912px) {
-   .Navlinks > * {
+   .Navlinks>* {
       margin-right: 1.5vw;
    }
 }
+
 @media (max-width: 768px) {
    .Navlinks {
       display: none;
    }
+
    .Sidebar-Toggle {
       display: flex;
       justify-content: center;
@@ -181,6 +168,7 @@ const links = reactive<Array<{ to: Page; text: string }>>([
       width: auto;
       aspect-ratio: 1;
    }
+
    .Sidebar-Toggle-Line {
       height: 8%;
       width: 80%;
@@ -189,43 +177,49 @@ const links = reactive<Array<{ to: Page; text: string }>>([
       background-color: #125e8a;
       transition-duration: 500ms;
    }
+
    .Toggled .Sidebar-Toggle-Line {
       position: absolute;
    }
+
    .Toggled .Sidebar-Toggle-Line:nth-child(1) {
       transform: rotate(-45deg);
    }
+
    .Toggled .Sidebar-Toggle-Line:nth-child(2) {
       width: 0;
    }
+
    .Toggled .Sidebar-Toggle-Line:nth-child(3) {
       transform: rotate(45deg);
    }
+
    .Sidebar {
       position: fixed;
       top: 0;
       z-index: 98;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(
-         52deg,
-         var(--Dark-Green),
-         var(--Another-Dark-Green)
-      );
+      background-image: linear-gradient(52deg,
+            var(--Dark-Green),
+            var(--Another-Dark-Green));
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
    }
+
    .Sidebar-Link {
       color: white;
       font-size: 20pt;
       margin-top: 20px;
    }
+
    .Sidebar-Link.Selected {
       border-bottom: 2px solid white;
       font-weight: bold;
    }
+
    .Sidebar .Item-Tracker-Button {
       color: white;
       border-color: white;
