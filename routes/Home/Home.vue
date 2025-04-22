@@ -71,7 +71,7 @@ onMounted(() => {
          <hr class="Line" />
          <img :src="EgpSign" class="Floating-Image Egp-Sign" alt="A green-to-brown colored egp sign." />
          <img :src="DollarSign" class="Floating-Image Dollar-Sign" alt="A green-to-brown colored dollar sign." />
-         <h1 class="Heading">Cheap, affordable costs.</h1>
+         <h1 class="Heading">Affordable costs.</h1>
          <p class="Paragraph">
             Enjoy competitive rates for all your shipping needs. At Winex, we believe in transparent pricing with no
             hidden fees, making it easier for you to send packages anywhere in Egypt without breaking the bank.
