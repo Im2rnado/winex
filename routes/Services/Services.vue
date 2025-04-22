@@ -51,49 +51,57 @@ onMounted(() => {
          <h1 class="Heading">Our Services</h1>
          <hr class="Line" />
          <p class="Paragraph">
-            Here's a look at some of the services we offer as a company. They
-            range from good transportation, door delivery, warehousing,
-            disposal, security and more.
+            Winex offers comprehensive logistics solutions designed to help your business grow.
+            From swift deliveries to secure warehousing, we've got your business covered.
          </p>
       </section>
       <section ref="section2Ref" class="Section Section-2">
          <div class="Grid-Container">
             <ServiceItem :src="Truck" alt="truck icon.">
-               <template #heading> Procurement </template>
-               Winex offers procurement and buyer representation to
-               our customers, we buy, pick up, crate and package on your behalf,
-               and ship either by air or sea to your final destination.
+               <template #heading>Door-to-Door Delivery</template>
+               Swift and secure deliveries to your customers' doors, ensuring maximum satisfaction with same-day and next-day options.
             </ServiceItem>
             <ServiceItem :src="Freight" alt="freight ship icon.">
-               <template #heading> Freight Services </template>
-               Winex ships worldwide, containers and RoRos “Roll on Roll off”,
-               whether you are shipping your car, household goods, motorhomes,
-               tractors, heavy construction / earth moving equipment and general
-               shipping, we can handle it all.
+               <template #heading>Transportation Solutions</template>
+               From parcels to bulk shipments, our fleet moves it all — smart, safe, and on time across Egypt.
             </ServiceItem>
-            <ServiceItem :src="Bicycle" alt="icon of person riding a bicycle.">
-               <template #heading>Dispatch Delivery</template>
-               Winex provides the largest last-mile courier delivery solution
-               in Egypt. Send your parcels and packages with Winex Go.
+            <ServiceItem :src="Papers" alt="box icon.">
+               <template #heading>Order Fulfillment</template>
+               We store, pack, and ship your products with precision and care, taking inventory management off your hands.
             </ServiceItem>
             <ServiceItem :src="Warehouse" alt="warehouse icon.">
-               <template #heading> Warehousing </template>
-               As an experienced logistics provider, we can help with any
-               storage needs, for all long as is necessary.
-            </ServiceItem>
-            <ServiceItem :src="Papers" alt="icon of stacked papers.">
-               <template #heading>Customs Clearance</template>
-               Winex will handle all processes involved in the transportation
-               of your goods, including clearance.
-            </ServiceItem>
-            <ServiceItem :src="Chatbox" alt="message chat icon.">
-               <template #heading> 24/7 Support </template>
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Obcaecati cum nihil corporis exercitationem, Sit asperiores in
-               praesentium qui quo aliquid natus expedita accusantium ipsum.
+               <template #heading>Warehousing</template>
+               Scalable and secure storage solutions for all your inventory needs, with flexible short and long-term options.
             </ServiceItem>
          </div>
       </section>
+
+      <section ref="section3Ref" class="Section Section-3">
+         <h1>Why Choose Us</h1>
+         <div class="Features-Container">
+            <div class="Feature-Item">
+               <h3>Same-Day Speed</h3>
+               <p>Get your packages delivered on the same day within city limits.</p>
+            </div>
+            <div class="Feature-Item">
+               <h3>Reliable COD Remittance</h3>
+               <p>Secure and timely cash-on-delivery payment processing.</p>
+            </div>
+            <div class="Feature-Item">
+               <h3>Flexible Pickup & Delivery</h3>
+               <p>Schedule pickups and deliveries at your convenience.</p>
+            </div>
+            <div class="Feature-Item">
+               <h3>Real-Time Tracking</h3>
+               <p>Monitor your shipments every step of the way.</p>
+            </div>
+            <div class="Feature-Item">
+               <h3>Customer-Centric Support</h3>
+               <p>Our dedicated team is always ready to assist with any inquiries.</p>
+            </div>
+         </div>
+      </section>
+
       <section class="Section Section-3">
          <h1>Notable Partners</h1>
          <div class="Carousel-Container">
@@ -152,15 +160,55 @@ onMounted(() => {
 }
 .Grid-Container {
    display: grid;
-   grid: repeat(2, auto) / repeat(3, auto);
+   grid: repeat(2, auto) / repeat(2, auto);
    row-gap: 25px;
+   column-gap: 25px;
    place-items: center;
 }
 .Section-3 {
+   padding-top: 50px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: #f4f9fb;
+   height: 60vh;
+}
+.Section-3 h1 {
+   margin-bottom: 35px;
+   color: var(--Dark-Green);
+}
+.Features-Container {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px;
+   width: 80%;
+   max-width: 1200px;
+}
+.Feature-Item {
+   background: white;
+   padding: 25px;
+   border-radius: 10px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+   transition: transform 0.3s ease;
+}
+.Feature-Item:hover {
+   transform: translateY(-5px);
+}
+.Feature-Item h3 {
+   color: var(--Dark-Green);
+   margin-bottom: 10px;
+   font-size: 20px;
+}
+.Feature-Item p {
+   color: var(--Yet-Another-Dark-Green);
+   font-size: 16px;
+   line-height: 1.5;
+}
+.Section-4 {
    padding-right: 0;
    max-height: 450px;
 }
-.Section-3 h1 {
+.Section-4 h1 {
    margin-bottom: 35px;
 }
 .Carousel-Container {
@@ -182,6 +230,10 @@ onMounted(() => {
    .Grid-Container {
       row-gap: 50px;
    }
+   .Features-Container {
+      grid-template-columns: repeat(2, 1fr);
+      width: 90%;
+   }
 }
 @media (max-width: 768px) {
    .Section-2 {
@@ -199,12 +251,24 @@ onMounted(() => {
       height: fit-content;
       max-height: fit-content;
    }
+   .Features-Container {
+      grid-template-columns: 1fr;
+   }
 }
 @media (max-width: 475px) {
    .Section-1 .Paragraph {
       font-size: 15px;
       line-height: 25px;
       width: 90%;
+   }
+   .Feature-Item {
+      padding: 15px;
+   }
+   .Feature-Item h3 {
+      font-size: 18px;
+   }
+   .Feature-Item p {
+      font-size: 14px;
    }
 }
 </style>

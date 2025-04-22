@@ -1,17 +1,18 @@
 {
    "name": "winex",
    "version": "1.0.0",
-   "start-date": "11/1/2022",
    "description": "A full website for a logistics company in Egypt.",
    "main": "main.js",
    "scripts": {
       "dev": "vite",
       "build": "vite build",
       "test": "vitest",
-      "coverage": "vitest run --coverage"
+      "coverage": "vitest run --coverage",
+      "predeploy": "vite build",
+      "deploy": "gh-pages -d dist"
    },
    "keywords": [],
-   "author": "adebola-io",
+   "author": "Im2rnado",
    "license": "ISC",
    "devDependencies": {
       "@testing-library/vue": "^6.6.1",
@@ -19,6 +20,7 @@
       "@vitest/coverage-c8": "^0.24.5",
       "@vue/compiler-sfc": "^3.2.41",
       "@vue/test-utils": "2.0.0-rc.18",
+      "gh-pages": "^6.3.0",
       "happy-dom": "^7.6.6",
       "vite": "^3.2.2",
       "vitest": "^0.24.5"

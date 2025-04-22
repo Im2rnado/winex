@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, reactive, ref, watch } from "vue";
-import Logo from "@/assets/svg/logo.svg";
+import { onMounted, reactive, ref, watch } from "vue";
+import Logo from "@/assets/image/logo.png";
 import { Page, useStore } from "@/stores";
 import gsap from "gsap";
 import { useRouter } from "vue-router";
@@ -49,7 +49,10 @@ const links = reactive<Array<{ to: Page; text: string }>>([
 <template>
    <Teleport to="body">
       <header ref="headerRef" class="Header">
-         <img :src="Logo" alt="Winex" class="Logo" />
+         <div class="Logo-Container">
+            <img :src="Logo" alt="Winex" class="Logo" />
+            <p class="Logo-Subheading">From Last Mile… to Last Meter</p>
+         </div>
          <nav class="Navigation-Bar">
             <menu class="Navlinks">
                <router-link v-for="link in links" :class="[
@@ -62,8 +65,8 @@ const links = reactive<Array<{ to: Page; text: string }>>([
                <button type="button" class="Navlink Careers">
                   Careers
                </button>
-               <button type="button" class="Item-Tracker-Button Contact-Us">
-                  Contact Us
+               <button type="button" class="Item-Tracker-Button Contact-Us" @click="$router.push('/contact')">
+                  Get Started
                </button>
             </menu>
          </nav>
@@ -85,8 +88,8 @@ const links = reactive<Array<{ to: Page; text: string }>>([
                   <button type="button" :key="4" :data-index="3" class="Sidebar-Link">
                      Careers
                   </button>
-                  <button :key="5" :data-index="4" class="Item-Tracker-Button Contact-Us">
-                     Contact Us
+                  <button :key="5" :data-index="4" class="Item-Tracker-Button Contact-Us" @click="$router.push('/contact')">
+                     Get Started
                   </button>
                </TransitionGroup>
             </aside>
@@ -117,8 +120,31 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    background-color: white;
 }
 
+.Logo-Container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 60%;
+   width: auto;
+   max-width: 180px;
+   min-width: 120px;
+}
+
 .Logo {
-   height: 48%;
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+}
+
+.Logo-Subheading {
+   margin-top: 4px;
+   font-size: clamp(9px, 0.8vw, 11px);
+   color: var(--Dark-Green);
+}
+
+.Navlinks {
+   display: flex;
+   align-items: center;
 }
 
 .Navlinks>* {
@@ -136,6 +162,7 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    border: 2px solid var(--Dark-Green);
    border-radius: 8px;
    transition-duration: 500ms;
+   white-space: nowrap;
 }
 
 .Item-Tracker-Button:hover {
@@ -148,15 +175,53 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    display: none;
 }
 
-@media (max-width: 912px) {
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
    .Navlinks>* {
-      margin-right: 1.5vw;
+      margin-right: 36px;
+   }
+   
+   .Header {
+      font-size: 16px;
+   }
+   
+   .Item-Tracker-Button {
+      padding: 12px 20px;
    }
 }
 
+/* Tablets */
+@media (max-width: 912px) {
+   .Navlinks>* {
+      margin-right: 24px;
+   }
+   
+   .Header {
+      font-size: 15px;
+   }
+   
+   .Item-Tracker-Button {
+      padding: 10px 16px;
+   }
+}
+
+/* Small tablets */
+@media (max-width: 820px) {
+   .Navlinks>* {
+      margin-right: 16px;
+   }
+}
+
+/* Mobile devices */
 @media (max-width: 768px) {
    .Navlinks {
       display: none;
+   }
+   
+   .Logo-Container {
+      height: 70%;
+      min-width: 100px;
+      margin-left: 10px;
    }
 
    .Sidebar-Toggle {
@@ -165,7 +230,7 @@ const links = reactive<Array<{ to: Page; text: string }>>([
       align-items: center;
       flex-direction: column;
       height: 80%;
-      width: auto;
+      width: 40px;
       aspect-ratio: 1;
    }
 
@@ -207,6 +272,8 @@ const links = reactive<Array<{ to: Page; text: string }>>([
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
    }
 
    .Sidebar-Link {
@@ -226,6 +293,34 @@ const links = reactive<Array<{ to: Page; text: string }>>([
       margin: 0;
       margin-top: 20px;
       font-size: 20pt;
+   }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+   .Logo-Container {
+      height: 60%;
+      min-width: 80px;
+      margin-left: 0;
+   }
+   
+   .Logo-Subheading {
+      font-size: 8px;
+   }
+   
+   .Sidebar-Link {
+      font-size: 16pt;
+      margin-top: 16px;
+   }
+   
+   .Sidebar .Item-Tracker-Button {
+      padding: 10px 16px;
+      font-size: 16pt;
+      margin-top: 16px;
+   }
+   
+   .Sidebar-Toggle {
+      width: 32px;
    }
 }
 </style>

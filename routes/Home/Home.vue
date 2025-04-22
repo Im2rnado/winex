@@ -57,13 +57,10 @@ onMounted(() => {
    <main class="Home">
       <section class="Section Section-1">
          <div class="Text">
-            <h1 class="Heading">We are a Logistics Company</h1>
+            <h1 class="Heading">Reliable. Fast. Scalable Logistics Solutions.</h1>
             <p class="Paragraph">
-               Winex is your trusted logistics partner in Egypt, providing fast, reliable, and secure delivery solutions
-               for businesses and individuals. Whether you’re sending documents, parcels, or large shipments, we ensure
-               your items reach every corner of Egypt safely and on time.
-            </p>
-            <button type="button" class="Action-Button">Get Started</button>
+               We are a next-generation logistics company specialized in door-to-door delivery, same-day and next-day shipping, transportation, fulfillment, and warehousing. Whether you're a growing business or an established brand, we help you reach your customers faster and more efficiently — all the way to their doorstep.            </p>
+            <button type="button" class="Action-Button" @click="$router.push('/contact')">Get Started</button>
          </div>
          <div class="Paper-Plane-Container">
             <img :src="PaperPlane" v-animate="PAPER_PLANE" class="Paper-Plane"
@@ -84,19 +81,22 @@ onMounted(() => {
          </button>
       </section>
       <section ref="section3Ref" class="Section Section-3">
-         <h1 class="Heading">Seamless and Secure Delivery.</h1>
+         <h1 class="Heading">Our Services.</h1>
          <div class="Grid-Container">
-            <GridItem :src="World" alt="A white outline of a globe.">
-               Deliver to all governorates and cities across Egypt.
+            <GridItem :src="Box" alt="A white outline of a globe.">
+               Door-to-Door Delivery.
             </GridItem>
             <GridItem :src="Location" alt="A white outline of a location pin.">
-               Track your shipments in real time, every step of the way.
+               Transportation Solutions.
+            </GridItem>
+            <GridItem :src="World" alt="A white outline of a packaging box.">
+               Order Fulfillment.
             </GridItem>
             <GridItem :src="Box" alt="A white outline of a packaging box.">
-               Safe, secure, and weather-resistant packaging for every delivery.
+               Warehousing.
             </GridItem>
          </div>
-         <button type="button" class="Action-Button">Learn More</button>
+         <button type="button" class="Action-Button" @click="$router.push('/services')">Learn More</button>
       </section>
       <section ref="section4Ref" class="Section Section-4">
          <div class="Handshake-Container">
@@ -105,10 +105,10 @@ onMounted(() => {
          <div class="Text">
             <h1 class="Heading">Ready to Ship with Winex?</h1>
             <p class="Paragraph">
-               Join thousands of satisfied customers across Egypt. Experience hassle-free logistics and let us handle
-               your deliveries with care and professionalism. Start shipping with Winex today!
+               Let's Move Your Business Forward.
+               Fill out the service request form and we’ll be in touch within 24 hours.
             </p>
-            <button type="button" class="Action-Button">Send an Item</button>
+            <button type="button" class="Action-Button" @click="$router.push('/contact')">Start Now</button>
          </div>
       </section>
    </main>
@@ -242,7 +242,7 @@ onMounted(() => {
 }
 .Section-3 .Grid-Container {
    display: grid;
-   grid: auto / auto auto auto;
+   grid: auto / auto auto auto auto;
    gap: 15.68px;
    margin-top: 30px;
 }
@@ -329,7 +329,7 @@ onMounted(() => {
       width: 70%;
    }
    .Section-3 .Grid-Container {
-      grid: repeat(3, auto) / auto;
+      grid: repeat(4, auto) / auto;
    }
    .Section-3 .Action-Button {
       margin-bottom: 80px;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Logo from "@/assets/svg/logo.svg";
+import Logo from "@/assets/image/logo2.png";
 import Facebook from "@/assets/svg/facebook.svg";
 import Twitter from "@/assets/svg/twitter.svg";
 import LinkedIn from "@/assets/svg/linkedin.svg";
@@ -76,7 +76,7 @@ import Instagram from "@/assets/svg/instagram.svg";
 }
 
 .Logo-Container img {
-   height: 66px;
+   height: 80px;
 }
 
 .Logo-Container p {

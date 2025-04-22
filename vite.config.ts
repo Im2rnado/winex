@@ -5,6 +5,7 @@ import vue from "@vitejs/plugin-vue";
 
 export default <UserConfig>{
    plugins: [vue()],
+   base: '/winex/',
    resolve: {
       alias: {
          "@": path.resolve(__dirname, "."),
