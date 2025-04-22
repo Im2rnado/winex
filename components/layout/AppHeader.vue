@@ -123,22 +123,22 @@ const links = reactive<Array<{ to: Page; text: string }>>([
 .Logo-Container {
    display: flex;
    flex-direction: column;
-   align-items: center;
-   height: 60%;
+   height: 55%;
    width: auto;
    max-width: 180px;
-   min-width: 120px;
+   min-width: 100px;
 }
 
 .Logo {
    height: 100%;
    width: 100%;
    object-fit: contain;
+   object-position: left;
 }
 
 .Logo-Subheading {
    margin-top: 4px;
-   font-size: clamp(9px, 0.8vw, 11px);
+   font-size: clamp(9px, 0.8vw, 14px);
    color: var(--Dark-Green);
 }
 

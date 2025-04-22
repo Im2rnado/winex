@@ -19,7 +19,7 @@ const imageModule = await import(`../../assets/svg/${props.image}.svg`);
 
 <style scoped>
 .Info-Item {
-   height: 900px;
+   height: 400px;
    width: 100%;
    position: relative;
    border-radius: 30px;
@@ -46,15 +46,18 @@ const imageModule = await import(`../../assets/svg/${props.image}.svg`);
 }
 .Info-Item img {
    position: absolute;
-   width: 450px;
+   width: 250px;
    bottom: 0;
-   left: 0;
+   right: 0;
    transform: translateY(30%);
    opacity: 0.5;
 }
 @media (max-width: 1024px) {
+   .Info-Item {
+      height: 600px;
+   }
    .Info-Item img {
-      width: 300px;
+      width: 200px;
    }
 }
 @media (max-width: 768px) {

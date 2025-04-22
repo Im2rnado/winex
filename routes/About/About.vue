@@ -15,41 +15,19 @@ import Moustafa from "@/assets/image/moustafa.jpeg";
          <section class="Section Section-2">
             <InfoItem heading="Who we are" image="info"
                color="linear-gradient(110.76deg, #204B57 0.54%, #053957 66.49%)">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.
+               We’re a next-generation logistics company that takes your business further, faster. From door-to-door delivery to same-day and next-day shipping, transportation, fulfillment, and warehousing, we handle it all. 
             </InfoItem>
             <InfoItem heading="What we do" image="box" color=" #125E8A">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.
+               Led by a dedicated team of logistics specialists, we consistently deliver innovative, cost-effective, and tailor-made shipping and transport solutions.
             </InfoItem>
             <InfoItem heading="What is our mission?" image="flag" color="#36578B">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.
+               To provide innovative, agile, and customer-centric logistics solutions that empower businesses to grow and thrive 
+               in a rapidly changing world.
             </InfoItem>
-            <InfoItem heading="Going global" image="world"
+            <InfoItem heading="What is our vision?" image="world"
                color="linear-gradient(222.98deg, #8A716A 28.01%, #6C5A55 100%)">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat
-               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-               sunt in culpa qui officia deserunt mollit anim id est laborum.
+               To become the leading 3PL provider in the industry, recognized for our commitment to innovation, agility, and customer 
+               satisfaction.
             </InfoItem>
          </section>
       </Suspense>
@@ -58,28 +36,8 @@ import Moustafa from "@/assets/image/moustafa.jpeg";
          <h1 class="Heading">Meet Our Management</h1>
          <div class="Profile-Grid">
             <Person :image="Moustafa">
-               Moustafa Akef
+               Nabil Akef
                <template #title> Chief Executive Officer </template>
-            </Person>
-            <Person :image="Moustafa">
-               Moustafa Akef
-               <template #title> Chief Legal Officer </template>
-            </Person>
-            <Person :image="Moustafa">
-               Moustafa Akef
-               <template #title> Executive Manager </template>
-            </Person>
-            <Person :image="Moustafa">
-               Moustafa Akef
-               <template #title>Assistant Manager</template>
-            </Person>
-            <Person :image="Moustafa">
-               Moustafa Akef
-               <template #title>Chief Financial Officer</template>
-            </Person>
-            <Person :image="Moustafa">
-               Moustafa Akef
-               <template #title>Chief Technical Officer</template>
             </Person>
          </div>
       </section>
@@ -135,7 +93,7 @@ import Moustafa from "@/assets/image/moustafa.jpeg";
 }
 .Profile-Grid {
    display: grid;
-   grid: repeat(2, auto) / repeat(3, auto);
+   grid: repeat(2, auto) / repeat(1, auto);
    place-items: center;
    width: 100%;
    margin-block: 100px;

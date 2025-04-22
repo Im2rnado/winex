@@ -150,7 +150,7 @@ onMounted(() => {
 }
 .Section-1 .Paragraph {
    width: 80%;
-   text-align: justify;
+   text-align: left;
 }
 @media (max-width: 912px) {
    .Section-1 .Paragraph {
