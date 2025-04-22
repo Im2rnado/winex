@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import gsap from "gsap";
+import emailjs from '@emailjs/browser';
 
 // Form data
 const formData = ref({
   name: "",
+  email: "",
+  phone: "",
   industry: "",
   location: "",
   dailyVolume: "",
@@ -24,11 +27,59 @@ const pickupOptions = [
 const section1Ref = ref<Nullable<HTMLElement>>(null);
 const formSectionRef = ref<Nullable<HTMLElement>>(null);
 
+// Loading state
+const isSubmitting = ref(false);
+
 // Handle form submission
 const handleSubmit = () => {
-  alert('Form submitted successfully!');
-  console.log(formData.value);
-  // Here you would typically send the data to a backend
+  isSubmitting.value = true;
+  
+  // Prepare form data for EmailJS
+  const emailParams = {
+    to_name: "Nabil",
+    to_email: "Nabil@win-ex.com",
+    from_name: formData.value.name,
+    from_email: formData.value.email,
+    phone: formData.value.phone,
+    industry: formData.value.industry,
+    location: formData.value.location,
+    daily_volume: formData.value.dailyVolume,
+    percentage_delivery: formData.value.percentageDelivery,
+    pickup_dropoff: formData.value.pickupDropoff.join(', '),
+    frequency: formData.value.frequency,
+    cod_remittance: formData.value.codRemittance
+  };
+  
+  // Send using EmailJS
+  emailjs.send(
+    'service_winex', // Replace with your EmailJS service ID
+    'template_winex', // Replace with your EmailJS template ID
+    emailParams,
+    'iT0QUvPLLgJIQEVJs' // Replace with your EmailJS public key
+  )
+  .then(() => {
+    alert('Thank you! Your form has been submitted successfully.');
+    // Reset form
+    formData.value = {
+      name: "",
+      email: "",
+      phone: "",
+      industry: "",
+      location: "",
+      dailyVolume: "",
+      percentageDelivery: "",
+      pickupDropoff: [],
+      frequency: "",
+      codRemittance: ""
+    };
+  })
+  .catch((error: any) => {
+    console.error('Error submitting form:', error);
+    alert('There was a problem submitting your form. Please try again later.');
+  })
+  .finally(() => {
+    isSubmitting.value = false;
+  });
 };
 
 onMounted(() => {
@@ -80,6 +131,22 @@ onMounted(() => {
               <span class="Arabic-Label">اسم العميل</span>
             </label>
             <input type="text" id="name" v-model="formData.name" required>
+          </div>
+
+          <div class="Form-Group">
+            <label for="email">
+              Email Address:
+              <span class="Arabic-Label">البريد الإلكتروني</span>
+            </label>
+            <input type="email" id="email" v-model="formData.email" required>
+          </div>
+
+          <div class="Form-Group">
+            <label for="phone">
+              Phone Number:
+              <span class="Arabic-Label">رقم الهاتف</span>
+            </label>
+            <input type="tel" id="phone" v-model="formData.phone" required>
           </div>
           
           <div class="Form-Group">
@@ -154,8 +221,8 @@ onMounted(() => {
           </div>
           
           <div class="Form-Group Button-Group">
-            <button type="submit" class="Submit-Button">
-              Get Started
+            <button type="submit" class="Submit-Button" :disabled="isSubmitting">
+              {{ isSubmitting ? 'Sending...' : 'Get Started' }}
             </button>
           </div>
         </form>
@@ -229,8 +296,8 @@ onMounted(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 270px;
+  padding-bottom: 270px;
   background-color: #f4f9fb;
   height: auto;
 }
@@ -274,7 +341,7 @@ label {
   margin-top: 2px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="tel"] {
   width: 100%;
   padding: 12px 15px;
   border: 2px solid rgba(18, 94, 138, 0.3);
@@ -283,7 +350,7 @@ input[type="text"] {
   transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {
   outline: none;
   border-color: var(--Another-Dark-Green);
 }

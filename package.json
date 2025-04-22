@@ -26,6 +26,7 @@
       "vitest": "^0.24.5"
    },
    "dependencies": {
+      "@emailjs/browser": "^4.4.1",
       "@pinia/testing": "^0.0.14",
       "gsap": "^3.11.3",
       "pinia": "^2.0.23",
