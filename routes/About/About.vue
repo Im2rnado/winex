@@ -1,8 +1,7 @@
 <script setup>
 import InfoItem from "./InfoItem.vue";
 import Person from "./Person.vue";
-
-import Moustafa from "@/assets/image/moustafa.jpeg";
+import Akef from "@/assets/image/akef.jpeg";
 </script>
 
 <template>
@@ -35,7 +34,7 @@ import Moustafa from "@/assets/image/moustafa.jpeg";
          <div class="Overlay"></div>
          <h1 class="Heading">Meet Our Management</h1>
          <div class="Profile-Grid">
-            <Person :image="Moustafa">
+            <Person :image="Akef">
                Nabil Akef
                <template #title> Chief Executive Officer </template>
             </Person>

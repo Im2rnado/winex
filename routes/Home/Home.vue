@@ -6,6 +6,7 @@ import EgpSign from "@/assets/svg/egp2.svg";
 import World from "@/assets/svg/world.svg";
 import Location from "@/assets/svg/location.svg";
 import Box from "@/assets/svg/box.svg";
+import Motorcycle from "@/assets/svg/motorcycle.svg";
 import Handshake from "@/assets/svg/handshake.svg";
 import { PAPER_PLANE, tweens } from "@/animations";
 import { onMounted, ref } from "vue";
@@ -83,7 +84,7 @@ onMounted(() => {
       <section ref="section3Ref" class="Section Section-3">
          <h1 class="Heading">Our Services.</h1>
          <div class="Grid-Container">
-            <GridItem :src="Box" alt="A white outline of a globe.">
+            <GridItem :src="Motorcycle" alt="A white outline of a globe.">
                Door-to-Door Delivery.
             </GridItem>
             <GridItem :src="Location" alt="A white outline of a location pin.">
