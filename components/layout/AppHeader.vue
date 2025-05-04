@@ -295,31 +295,4 @@ const links = reactive<Array<{ to: Page; text: string }>>([
    }
 }
 
-/* Small mobile devices */
-@media (max-width: 480px) {
-   .Logo-Container {
-      height: 60%;
-      min-width: 80px;
-      margin-left: 0;
-   }
-   
-   .Logo-Subheading {
-      font-size: 8px;
-   }
-   
-   .Sidebar-Link {
-      font-size: 16pt;
-      margin-top: 16px;
-   }
-   
-   .Sidebar .Item-Tracker-Button {
-      padding: 10px 16px;
-      font-size: 16pt;
-      margin-top: 16px;
-   }
-   
-   .Sidebar-Toggle {
-      width: 32px;
-   }
-}
 </style>

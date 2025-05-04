@@ -314,9 +314,6 @@ onMounted(() => {
       text-align: center;
       width: 80%;
    }
-   .Paper-Plane-Container {
-      height: 40%;
-   }
    .Paper-Plane {
       height: 80%;
    }
@@ -335,7 +332,7 @@ onMounted(() => {
    .Section-1 .Action-Button {
       margin-bottom: 80px;
    }
-   .Section-2 .Action-Button {
+   .Section-3 .Action-Button {
       margin-bottom: 80px;
    }
    .Section-4 {
@@ -380,7 +377,7 @@ onMounted(() => {
       width: 90%;
       height: 35%;
       max-height: 400px;
-      margin-top: 50px;
+      margin-top: 20px;
    }
    .Section-1 .Paper-Plane {
       width: 60%;
