@@ -335,6 +335,9 @@ onMounted(() => {
    .Section-1 .Action-Button {
       margin-bottom: 80px;
    }
+   .Section-2 .Action-Button {
+      margin-bottom: 80px;
+   }
    .Section-4 {
       display: flex;
       justify-content: center;
@@ -377,7 +380,7 @@ onMounted(() => {
       width: 90%;
       height: 35%;
       max-height: 400px;
-      padding-top: 20px;
+      margin-top: 50px;
    }
    .Section-1 .Paper-Plane {
       width: 60%;

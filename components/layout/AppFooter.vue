@@ -125,7 +125,7 @@ import Instagram from "@/assets/svg/instagram.svg";
 /* Mobile responsiveness */
 @media (max-width: 768px) {
    .App-Footer {
-      height: 160px;
+      height: auto;
       padding: 15px var(--Vertical-Squeeze);
    }
 
