@@ -365,7 +365,7 @@ onMounted(() => {
       width: 80%;
    }
 }
-@media (max-width: 425px) {
+@media (max-width: 768px) {
    .Paragraph {
       font-size: 18px;
       width: 80%;
