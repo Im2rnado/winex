@@ -102,7 +102,7 @@ onMounted(() => {
          </div>
       </section>
 
-      <section class="Section Section-3">
+      <!-- <section class="Section Section-3">
          <h1>Notable Partners</h1>
          <div class="Carousel-Container">
             <div v-for="(_, index) in 2" :key="index" class="Partners-Carousel">
@@ -114,7 +114,7 @@ onMounted(() => {
                <Partner :src="Macys" alt="Macy's" />
             </div>
          </div>
-      </section>
+      </section> -->
    </main>
 </template>
 

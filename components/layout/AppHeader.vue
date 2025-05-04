@@ -62,9 +62,9 @@ const links = reactive<Array<{ to: Page; text: string }>>([
                ]" :to="link.to" :key="link.text">
                   {{ link.text }}
                </router-link>
-               <button type="button" class="Navlink Careers">
+               <!-- <button type="button" class="Navlink Careers">
                   Careers
-               </button>
+               </button> -->
                <button type="button" class="Item-Tracker-Button Contact-Us" @click="$router.push('/contact')">
                   Get Started
                </button>
@@ -85,9 +85,9 @@ const links = reactive<Array<{ to: Page; text: string }>>([
                   ]" :to="link.to" :key="link.text" :data-index="index">
                      {{ link.text }}
                   </router-link>
-                  <button type="button" :key="4" :data-index="3" class="Sidebar-Link">
+                  <!-- <button type="button" :key="4" :data-index="3" class="Sidebar-Link">
                      Careers
-                  </button>
+                  </button> -->
                   <button :key="5" :data-index="4" class="Item-Tracker-Button Contact-Us" @click="$router.push('/contact')">
                      Get Started
                   </button>

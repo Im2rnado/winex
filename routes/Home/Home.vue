@@ -68,7 +68,7 @@ onMounted(() => {
                alt="White paper plane with green-to-brown outline gradient." />
          </div>
       </section>
-      <section ref="section2Ref" class="Section Section-2">
+      <!-- <section ref="section2Ref" class="Section Section-2">
          <hr class="Line" />
          <img :src="EgpSign" class="Floating-Image Egp-Sign" alt="A green-to-brown colored egp sign." />
          <img :src="DollarSign" class="Floating-Image Dollar-Sign" alt="A green-to-brown colored dollar sign." />
@@ -80,7 +80,7 @@ onMounted(() => {
          <button type="button" class="Action-Button">
             See Our Pricing List
          </button>
-      </section>
+      </section> -->
       <section ref="section3Ref" class="Section Section-3">
          <h1 class="Heading">Our Services.</h1>
          <div class="Grid-Container">

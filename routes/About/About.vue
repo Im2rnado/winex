@@ -30,7 +30,7 @@ import Akef from "@/assets/image/akef.jpeg";
             </InfoItem>
          </section>
       </Suspense>
-      <section class="Section Section-3">
+      <!-- <section class="Section Section-3">
          <div class="Overlay"></div>
          <h1 class="Heading">Meet Our Management</h1>
          <div class="Profile-Grid">
@@ -39,7 +39,7 @@ import Akef from "@/assets/image/akef.jpeg";
                <template #title> Chief Executive Officer </template>
             </Person>
          </div>
-      </section>
+      </section> -->
    </main>
 </template>
 
