@@ -332,7 +332,7 @@ onMounted(() => {
    .Section-3 .Grid-Container {
       grid: repeat(4, auto) / auto;
    }
-   .Section-3 .Action-Button {
+   .Section-1 .Action-Button {
       margin-bottom: 80px;
    }
    .Section-4 {
@@ -377,6 +377,7 @@ onMounted(() => {
       width: 90%;
       height: 35%;
       max-height: 400px;
+      padding-top: 20px;
    }
    .Section-1 .Paper-Plane {
       width: 60%;

@@ -342,12 +342,18 @@ label {
 }
 
 input[type="text"], input[type="email"], input[type="tel"] {
-  width: 100%;
+  width: 97%;
   padding: 12px 15px;
   border: 2px solid rgba(18, 94, 138, 0.3);
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  input[type="text"], input[type="email"], input[type="tel"] {
+    width: 90%;
+  }
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus {

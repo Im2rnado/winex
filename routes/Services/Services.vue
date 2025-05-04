@@ -171,7 +171,8 @@ onMounted(() => {
    flex-direction: column;
    align-items: center;
    background-color: #f4f9fb;
-   height: 60vh;
+   height: auto;
+   padding-bottom: 50px;
 }
 .Section-3 h1 {
    margin-bottom: 35px;

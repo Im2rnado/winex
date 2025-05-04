@@ -88,9 +88,9 @@ const links = reactive<Array<{ to: Page; text: string }>>([
                   <!-- <button type="button" :key="4" :data-index="3" class="Sidebar-Link">
                      Careers
                   </button> -->
-                  <button :key="5" :data-index="4" class="Item-Tracker-Button Contact-Us" @click="$router.push('/contact')">
+                  <router-link :key="5" :data-index="4" class="Item-Tracker-Button Contact-Us" to="/contact" @click="sidebarIsOpen = !sidebarIsOpen">
                      Get Started
-                  </button>
+                  </router-link>
                </TransitionGroup>
             </aside>
          </Transition>
@@ -230,13 +230,12 @@ const links = reactive<Array<{ to: Page; text: string }>>([
       align-items: center;
       flex-direction: column;
       height: 80%;
-      width: 40px;
       aspect-ratio: 1;
    }
 
    .Sidebar-Toggle-Line {
       height: 8%;
-      width: 80%;
+      width: 100%;
       margin-block: 6%;
       border-radius: 10px;
       background-color: #125e8a;

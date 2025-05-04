@@ -16,13 +16,14 @@ import Instagram from "@/assets/svg/instagram.svg";
             its affiliates.
          </p>
       </div>
-      <div class="Icon-Row Outer-Icon-Row">
+      <!-- Hidden elements (commented out for now) -->
+      <!-- <div class="Icon-Row Outer-Icon-Row">
          <img :src="Facebook" alt="facebook icon" />
          <img :src="Instagram" alt="instagram icon" />
          <img :src="LinkedIn" alt="linkedin icon" />
          <img :src="Twitter" alt="twitter icon" />
-      </div>
-      <nav class="Links-Container">
+      </div> -->
+      <!-- <nav class="Links-Container">
          <li class="Links">
             <h3>INFO</h3>
             <ul>
@@ -58,7 +59,7 @@ import Instagram from "@/assets/svg/instagram.svg";
                <img :src="Twitter" alt="twitter icon" />
             </div>
          </li>
-      </nav>
+      </nav> -->
       <p class="Copyright">Winex 2025.</p>
    </footer>
 </template>
@@ -66,17 +67,26 @@ import Instagram from "@/assets/svg/instagram.svg";
 <style scoped>
 .App-Footer {
    position: relative;
-   display: grid;
-   grid-template-columns: 25% 65%;
-   column-gap: 10%;
-   place-items: center;
-   height: 430px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 180px; /* Reduced height since we're only showing minimal content */
    background: #11567d29;
-   padding-inline: var(--Vertical-Squeeze);
+   padding: 20px var(--Vertical-Squeeze);
+}
+
+.Logo-Container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
 }
 
 .Logo-Container img {
-   height: 80px;
+   height: 60px;
+   margin-top: 15px;
 }
 
 .Logo-Container p {
@@ -84,150 +94,75 @@ import Instagram from "@/assets/svg/instagram.svg";
    font-size: 13px;
    line-height: 16px;
    color: #125e8a;
-}
-
-.Links-Container {
-   display: grid;
-   grid-template-columns: repeat(4, 25%);
-   width: 100%;
-}
-
-.Links h3 {
-   font-family: "Raleway";
-   font-weight: 700;
-   font-size: 28px;
-   background: linear-gradient(94.74deg, #3c92ca 10.56%, #125e8a 94.88%);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   background-clip: text;
-   margin-bottom: 10px;
-}
-
-.Links li {
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 19px;
-   margin-bottom: 8px;
-   color: #125e8a;
-}
-
-.Icon-Row {
-   display: grid;
-   grid-template-columns: auto auto auto auto;
-   column-gap: 5px;
-   width: fit-content;
-}
-
-.Outer-Icon-Row {
-   display: none;
+   text-align: center;
 }
 
 .Copyright {
-   position: absolute;
-   bottom: 0;
    font-family: "Product Sans";
    font-style: normal;
    font-weight: 600;
-   font-size: 19.0317px;
+   font-size: 16px;
    line-height: 23px;
    text-align: center;
-   margin-bottom: 40px;
    color: #11567d;
+   margin-top: auto;
+   padding-bottom: 15px;
 }
 
-@media (max-width: 1024px) {
+/* Hidden styles kept for future reference */
+.Links-Container {
+   display: none;
+}
+
+.Icon-Row {
+   display: none;
+}
+
+.Links {
+   display: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+   .App-Footer {
+      height: 160px;
+      padding: 15px var(--Vertical-Squeeze);
+   }
+
    .Logo-Container img {
       height: 50px;
+      margin-top: 30px;
    }
 
-   .Links h3 {
-      font-size: 20px;
+   .Logo-Container p {
+      font-size: 11px;
+      line-height: 16px;
+      max-width: 300px;
    }
 
-   .Links li {
+   .Copyright {
       font-size: 14px;
    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 425px) {
    .App-Footer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      height: 540px;
-   }
-
-   .Logo-Container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      height: 150px;
+      padding: 12px var(--Vertical-Squeeze);
    }
 
    .Logo-Container img {
-      height: 60px;
+      height: 45px;
    }
 
    .Logo-Container p {
-      text-align: center;
-      width: 95%;
-      font-size: 11pt;
-      line-height: 19px;
-      margin-bottom: 0;
-   }
-
-   .Outer-Icon-Row {
-      display: grid;
-      column-gap: 13px;
-      margin-block: 40px;
-   }
-
-   .Icon-Row img {
-      height: 35px;
-   }
-
-   .Links-Container {
-      display: flex;
-      justify-content: space-around;
-      padding-inline: var(--Vertical-Squeeze);
-      margin-bottom: 30px;
-   }
-
-   .Links {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-   }
-
-   .Links>* {
-      text-align: center;
-   }
-
-   .Links li {
-      font-size: 13pt;
-   }
-
-   .Links.Contact-Links {
-      display: none;
-   }
-}
-
-@media (max-width: 425px) {
-   .Logo-Container p {
-      font-size: 9pt;
-   }
-
-   .Links h3 {
-      font-size: 15px;
-   }
-
-   .Links li {
-      font-size: 10pt;
+      font-size: 10px;
+      line-height: 14px;
+      max-width: 280px;
    }
 
    .Copyright {
-      font-size: 10pt;
+      font-size: 12px;
    }
 }
 </style>
